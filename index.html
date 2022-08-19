@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El día - Las últimas 24hs de noticias</title>
+    <link rel="stylesheet" href="materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+
+    
+    <nav class="navbar__container">
+        <section class="navbar_first__container">
+            <ul class="navbar_first_items__container">
+                <li class="logo tooltipped" data-position="bottom" data-tooltip="fecha" id="elDiaTooltip">
+                    <img src="./assets/logo.png" alt="Logo El dia">
+                </li>
+                <li class="menu"><a class='dropdown-trigger' href='#' data-target='dropdown1'>Secciones <img src="./assets/dropdown.png" alt="dropdown"></a></li>
+                <li class="last24">Últimas 24 horas</li>
+            </ul>
+            <section id="dropdown1" class='dropdown-content'>
+                <div class="news">
+                    <h4>NOTICIAS</h4>
+                    <ul>
+                        <li>La Región</li>
+                        <li>Policiales</li>
+                        <li>Política y Economía</li>
+                        <li>Deportes</li>
+                        <li>Sociedad</li>
+                        <li>Espectáculos</li>
+                        <li>Opinión</li>
+                        <li>El Mundo</li>
+                    </ul>
+                </div>
+                <div class="verticalDivider"></div>
+                <div class="sections">
+                    <h4>MÁS SECCIONES</h4>
+                    <ul>
+                        <li>Juegos</li>
+                        <li>Edición Impresa</li>
+                        <li>Club El Día</li>
+                        <li>Podcasts</li>
+                        <li>Blogs</li>
+                        <li>Suplementos</li>
+                        <li>Avisos</li>
+                    </ul>
+                </div>
+            </section>
+            <ul class="navbar_second_items__container">
+                <li class="search__bar">
+                    <img src="./assets/search.png" alt="">
+                </li>
+                <li class="games"><img src="./assets/clima.png" alt=""> 11°C</li>
+                <li> | </li>
+                <li class="user__name">Marta1540ds</li>
+                <li class="user__img"><img src="./assets/user.png" alt="Perfil Usuario"></li>
+            </ul>
+        </section>
+        <section class="navbar_second__container">
+            <ul class="tabs">
+                <li class="tab"><a href="#politica-y-economia">Política y Economia</a></li>
+                <li class="tab"><a href="#deportes">Deportes</a></li>
+                <li class="tab"><a href="#espectaculos">Espectáculos</a></li>
+            </ul>
+            <a class="edit tooltipped modal-trigger" data-tooltip="Editar intereses" data-position="bottom" href="#editarTemas" id="iconEditAnchor" >
+                <i id="editIcon" class="material-icons grey-text">edit</i>
+            </a>        
+        </section>
+    </nav>
+
+    <div id="editarTemas" class="modal">
+        <div class="modal-content">
+            <div class="modal__top">
+                <span class="last24hs">ÚLTIMAS 24HS</span>
+                <img class="modal-close" src="./assets/add.png" alt="">
+            </div>
+            <div class="modal_title__container">
+                <h3>¿Deseas editar tus temas?</h3>
+                <p>Clickea sobre las diferentes categorías para agregarlas o quitarlas de tus intereses.</p>
+            </div>
+            <div class="buttons__container">
+                <button class="categorie__button categorie_button__default" id="policial">Policiales</button>
+                <button class="categorie__button categorie_button__default" id="regional">La Región</button>
+                <button class="categorie__button categorie_button__default" id="mundo">El Mundo</button>
+                <button class="categorie__button categorie_button__selected" id="espectaculo">Espectáculos</button>
+                <button class="categorie__button categorie_button__selected" id="deporte">Deportes</button>
+                <button class="categorie__button categorie_button__default" id="sociedad">Sociedad</button>
+                <button class="categorie__button categorie_button__selected" id="politica">Política y Economía</button>
+                <button class="categorie__button categorie_button__default" id="opinion">Opinión</button>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-close button__close" id="aceptar">Aceptar</button>
+        </div>
+    </div>
+
+      
+
+    <main class="main__container">
+
+       
+         
+<!-- partial:index.partial.html -->
+<div id="pinContainer">
+    <div id="slideContainer">
+       
+        <section class="feed-1" id="politica-y-economia">
+
+      <div class="panel one" >
+
+        <img class="timeline" src="data/linea-tiempo.png" alt="liena de tiempo">
+        <h1 class="text"></h1> 
+        
+    <!-- ----------------------------PANEL 1-------------------------------------- -->
+
+            <div class="main-container_card" >
+ 
+            <div class="container" style=" margin-left: 4%;">
+           
+                <div class="card card-2" >
+                 
+         
+                      <!-- ============BEFORE HOVER====================== -->
+         
+         
+                    <div class="preview">
+                        <div class="new__categorie" style="margin-left: 0%;">
+                            <div class="categorie__line"></div>
+                            <span class="categorie__title">INFLACIÓN</span>
+                        </div>
+                        <h4 class="white-tittle">Tormenta económica e inflación sin control: se espera que en julio el piso sea de 7%</h4>
+                           
+                    </div>
+         
+                     <!-- ============AFTER HOVER====================== -->
+         
+                    <div class="content white-tittle_content">
+
+                        <div>
+                            <div class="new__categorie new_categorie__after " style="margin-left: 0%;">
+                                <div class="categorie__line"></div>
+                                <span class="categorie__title">INFLACIÓN</span>
+                            </div>
+
+
+                            <h4 class="white-tittle">Tormenta económica e inflación sin control: se espera que en julio el piso sea de 7%</h4>
+                            <p >Tras una semana de fuerte inestabilidad en la que saltaron los dólares paralelos y hubo fuertes remarcaciones en los precios de bienes durables y de consumo habitual, la economía sufre las consecuencias de la ampliación de la brecha cambiaria y las restricciones a las importaciones.</p>
+                           
+                        </div>
+                    </div>
+                </div>
+         
+         
+         
+                <div class="news_image_text">
+                    <img class="news_img"  src="data/news_2.png" alt="Cristina Fernandez">
+         
+                    <div>
+                        <div class="categorie__line" style="display: flex; align-items: center;">   <h5 class="black-tittle_hour" style="margin-left: 2% ;">Cristina Kirchner  ·  16:55</h5> </div>
+                   
+                    <a href="" class="black-tittle" style="color: black;">¿Cuál es la mirada de los gobernadores peronistas ante el reposicionamiento de Cristina Kirchner?</a>
+                    </div>
+                </div>
+         
+                       
+            </div>
+        
+         
+        </div>
+
+      </div>
+
+
+<!-- ----------------------------PANEL 2-------------------------------------- -->
+
+<div class="panel two">
+        
+        
+                <img style="opacity: 0;" class="timeline" src="data/linea-tiempo.png" alt="liena de tiempo">
+
+                <h1 class="text"></h1> 
+                
+            
+        
+        <div class="main-container_card">
+         
+
+                         <!-- -_-_-_-_-_-_-_-_-_-_-el ancho se cambia desde el width del container-_-_-_-_-_-_-_-_-_-_--->
+            <div class="container" style="width: 450px; ">
+
+                        
+                         <!-- -_-_-_-_-_-_-_-_-_-_-el ancho  y altura de la card se cambia de aca-_-_-_-_-_-_-_-_-_-_--->
+
+                <div style="display: flex; flex-direction: row;">
+
+
+
+                   
+                        <div class="card card-2" style="height: 230px; width: 50%;">
+                         
+                 
+                              <!-- ============BEFORE HOVER====================== -->
+                 
+                 
+                            <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+                            url('data/news_3.png');">
+
+                                <div style="margin-left: 0%; padding-left: 8px !important " class="new__categorie" >
+                                    <div class="categorie__line"></div>
+                                    <span class="categorie__title">GABINETE</span>
+                                </div>
+
+                                <h4 class="white-tittle" style="font-size: 16px;line-height: 19px;">Para Massa, la designación de Batakis no es suficiente y quiere mas cambios en el Gabinete</h4>
+                                   
+                            </div>
+                 
+                             <!-- ============AFTER HOVER====================== -->
+                 
+                            <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                            url('data/news_3.png');">
+        
+                                <div style="font-size: 16px;
+                                line-height: 19px;">
+
+                                    <div class="new__categorie new_categorie__after" style="margin-left: 0%;">
+                                        <div class="categorie__line"></div>
+                                        <span class="categorie__title">GABINETE</span>
+                                    </div>
+                                    
+                                    <p style="font-size: 12px">El presidente de la Cámara de Diputados, se hizo presente en Tucumán, junto a Alberto Fernández, en el acto conmemorativo por el Día de la Independencia.</p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="card card-2" style="height: 230px; width: 50%; margin-left: 0px;">
+                         
+                 
+                            <!-- ============BEFORE HOVER====================== -->
+               
+               
+                          <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+                          url('data/news_4.png');">
+
+                          <div style=" margin-left: 0%; padding-left: 8px !important" class="new__categorie">
+                            <div class="categorie__line"></div>
+                            <span class="categorie__title">POLÍTICA</span>
+                        </div>
+                              <h4 class="white-tittle" style="font-size: 16px; line-height: 19px;" >De cara al 2023: Cristina Kirchner gana terreno y advierten que Alberto F. "perdió la pulseada"</h4>
+                                 
+                          </div>
+               
+                           <!-- ============AFTER HOVER====================== -->
+               
+                           <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                           url('data/news_4.png');">
+       
+                               <div style="font-size: 16px;
+                               line-height: 19px;">
+                                   <div class="new__categorie new_categorie__after" style="margin-left: 0%;" >
+                                       <div class="categorie__line"></div>
+                                       <span class="categorie__title">POLITICA</span>
+                                   </div>
+                                   <p style="font-size: 12px">El Gobierno trata de reacomodarse luego de la salida de Martín Guzmán y el reemplazo de la flamante ministra de Economía, Silvina Batakis.</p>
+                                  
+                               </div>
+                           </div>
+                    <!--  <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                          url('data/news_4.png');">
+                            <div class="new__categorie new_categorie__after">
+                                <div class="categorie__line"></div>
+                                <span class="categorie__title">POLITICA</span>
+                            </div>
+                            <p style="font-size: 12px;
+                            line-height: 19px;">El Gobierno trata de reacomodarse luego de la salida de Martín Guzmán y el reemplazo de...</p>
+                        </div>
+                        -->
+                      </div>
+                    
+                    </div>
+
+
+
+
+                    <div class="card card-2" style="height: 180px; margin-top: 0px;" >
+                 
+         
+                        <!-- ============BEFORE HOVER====================== -->
+           
+           
+                      <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+                      url('data/news_5.png');">
+                          
+                          
+                          <div class="new__categorie" style="margin-left: -1.5%;">
+                            <div class="categorie__line"></div>
+                            <span class="categorie__title">INFLACIÓN</span>
+                        </div>
+                          
+                          <h4 class="white-tittle" style="font-size: 16px; line-height: 19px;">Batakis y la suba de tarifas: "No habrá cambios en el decreto de segmentación"</h4>
+                             
+                      </div>
+           
+                       <!-- ============AFTER HOVER====================== -->
+           
+                      <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                      url('data/news_5.png');">
+                           
+
+                                
+
+                          <div style="font-size: 16px;
+                          line-height: 19px;">
+
+                                  <div class="new__categorie" style="margin-left: -7%;">
+                                    <div class="categorie__line"></div>
+                                    <span class="categorie__title">INFLACIÓN</span>
+                                </div>
+                              <p >La flamante ministra de Economía, Silvina Batakis, afirmó que están trabajando con "el decreto que instruyó el Presidente a la Secretaría de Energía”.</p>
+                             
+                          </div>
+                      </div>
+                  </div>
+           
+
+                </div>
+                
+                 
+                </div>
+        
+
+           
+
+
+
+      </div>
+
+      /*--------------------------------PANEL 3 --------------------------------------------------------*/
+      
+      <div class="panel three" >
+
+
+
+          
+       <div style="display: flex ;">
+
+
+        <div class="main-container_card" style="margin-top: 51.2%; width: 90%; height: 50%; margin-left: -33.5%;">
+ 
+            <div class="container" style=" margin-left: 4%; width: 50%;">
+           
+                <div class="card card-2" >
+                 
+         
+                    <!-- ============BEFORE HOVER====================== -->
+       
+       
+                  <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+                  url('data/news_6.png');">
+
+                  <div class="new__categorie" style="margin-left: -6%;">
+                       <div class="categorie__line"></div>
+                       <span class="categorie__title">ECONOMÍA</span>
+                 </div>
+
+                      <h4 class="white-tittle" style=" font-size: 18px;">Batakis le presenta su plan al Presidente</h4>
+                         
+                  </div>
+       
+                   <!-- ============AFTER HOVER====================== -->
+       
+                  <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                  url('data/news_6.png');">
+
+                      <div>
+                         
+                        <div class="new__categorie" style="margin-left: -15%; margin-bottom: -5%;">
+                            <div class="categorie__line"></div>
+                            <span class="categorie__title">ECONOMÍA</span>
+                      </div>
+
+                          <p >En su sexto día como ministra de Economía, Silvina Batakis encabezó una reunión de trabajo con su gabinete, para analizar la agenda inmediata y definir las primeras medidas que la ministra presentará hoy al presidente Alberto Fernández. </p>
+                         
+                      </div>
+                  </div>
+              </div>
+       
+       
+       <!--el coso de aca no me toma la altura, ni me dejaba de terminas de modificar el ancho, porque debe tener alguna porpiedad que adapte el ancho del contenedor al contenido -->
+              <div class="news_image_text" style="width: 75%; ">
+                 <img style="margin-left: 8px; border-radius: 5px;" class="news_img"  src="data/news_7.png" alt="">
+       
+                 <div>
+                 <div class="categorie__line" style="display: flex; align-items: center; margin-left: 2% ;">   <h5 class="black-tittle_hour" style="margin-left: 4px ;">MANIFESTACIÓN · 3:21</h5> </div>
+                 
+                 
+                  <a style="font-family: 'Roboto'; font-style: normal;
+                   font-weight: 700; font-size: 12px; line-height: 19px; width: 95%; margin-left: 2%; margin-top: 6px; color: #000000;" href="" class="black-tittle" style="color: black;">Banderazos y reclamos: fuertes protestas contra el Gobierno</a>
+                  </div>
+              </div>
+       
+         
+                       
+            </div>
+        
+         
+        </div>
+
+        <div class="main-container_card" style="margin-top: 51.2%; width: 90%; height: 50%; margin-left: -50%;">
+ 
+            <div class="container" style=" margin-left: 4%; width: 50%;">
+           
+                <div class="card card-2" >
+                 
+         
+                    <!-- ============BEFORE HOVER====================== -->
+       
+       
+                  <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+                  url('data/news_8.png');">
+
+                  <div class="new__categorie" style="margin-left: -6%;">
+                       <div class="categorie__line"></div>
+                       <span class="categorie__title">POLÍTICA</span>
+                 </div>
+
+                      <h4 class="white-tittle" style=" font-size: 18px;">Las turbulencias políticas frenan el acuerdo para cubrir vacantes en la Corte</h4>
+                         
+                  </div>
+       
+                   <!-- ============AFTER HOVER====================== -->
+       
+                  <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                  url('data/news_8.png');">
+
+                      <div>
+                        <div class="new__categorie" style="margin-left: -15%; margin-bottom: -5%;">
+                            <div class="categorie__line"></div>
+                            <span class="categorie__title">POLÍTICA</span>
+                      </div>
+                          <p >El oficialismo y la oposición admiten que las conversaciones quedaron congeladas. Las peleas en el poder, como telón de fondo</p>
+                         
+                      </div>
+                  </div>
+              </div>
+       
+       
+       <!--el coso de aca no me toma la altura, ni me dejaba de terminas de modificar el ancho, porque debe tener alguna porpiedad que adapte el ancho del contenedor al contenido -->
+              <div class="news_image_text" style="width: 75%; ">
+                 <img style="margin-left: 8px; border-radius: 5px;" class="news_img"  src="data/news_9.png" alt="">
+       
+                 <div>
+                 <div class="categorie__line" style="display: flex; align-items: center; margin-left: 2% ;">   <h5 class="black-tittle_hour" style="margin-left: 4px ;">MANIFESTACIÓN · 3:21</h5> </div>
+                 
+                 
+                  <a style="font-family: 'Roboto'; font-style: normal;
+                   font-weight: 700; font-size: 12px; line-height: 19px; width: 95%; margin-left: 2%; margin-top: 6px; color: #000000;" href="" class="black-tittle" style="color: black;">Banderazos y reclamos: fuertes protestas contra el Gobierno</a>
+                  </div>
+              </div>
+       
+         
+                       
+            </div>
+        
+         
+        </div>
+
+    </div>
+
+
+    
+      </div>
+
+
+      /*--------------------------------PANEL 4 --------------------------------------------------------*/
+
+
+      <div class="panel four" >
+
+
+        <div class="main-container_card" style="margin-top: 74%; width: 80%; height: 50%; margin-left: -43%; ">
+         
+
+            <!-- -_-_-_-_-_-_-_-_-_-_-el ancho se cambia desde el width del container-_-_-_-_-_-_-_-_-_-_--->
+    <div class="container" style="width: 450px; ">
+    
+           
+            <!-- -_-_-_-_-_-_-_-_-_-_-el ancho  y altura de la card se cambia de aca-_-_-_-_-_-_-_-_-_-_--->
+    
+    <div style="display: flex; flex-direction: column;">
+    
+    
+<div class="parent" style="border-radius: 10px;">
+
+
+    <figure class="effeckt-caption" data-effeckt-type="cover-fade">
+
+     
+        <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+        url('data/Video cuadrado.png'); border-radius: 10px;">
+        
+           <img src="data/play.png" alt="" style=" position: absolute; top: 43%; left: 43%;">
+
+           <h4 class="white-tittle" style="font-size: 16px; line-height: 19px; padding-top: 72%; padding-bottom: 5%;">Alberto F. también salió a cruzar a Guzmán</h4>
+               
+        </div>
+     
+          
+    
+      <figcaption>
+        <div class="effeckt-figcaption-wrap">
+         
+            
+  
+          <!--
+  
+            EL width y height de la etiqueta video, cambian el tamaño del reproductor. 
+            Sin el constrols mute, el autoplay true no arranca. 
+            Pero para que tambien coincida con el contenedor, tambien hay que cambiar los tamaños en 
+            la clase "effeckt-caption".
+   
+  -->
+          <video width="224px" id="backface-video" height="209px" poster="http://video-js.zencoder.com/oceans-clip.jpg" loop="true" autoplay="autoplay" controls muted>
+            <source src="data/video-tiquitito.mp4" type="video/mp4" >
+            <source src="data/video-tiquitito.mp4" video/webm" >
+          </video>
+  
+        </div>
+         
+      </figcaption>
+  
+    </figure>
+  </div>
+         
+         <div class="card card-2" style="height: 210px; width: 50%; margin-left: 0px; margin-top: -19.5%;">
+            
+    
+            <!-- ============BEFORE HOVER====================== -->
+    
+    
+          <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+          url('data/news_11.png');">
+
+          <div class="new__categorie" style="margin-left: -7%;">
+          <div class="categorie__line"></div>
+          <span class="categorie__title">CGT</span>
+          </div>
+
+              <h4 class="white-tittle" style="font-size: 16px; line-height: 19px;" >La CGT se moviliza al Congreso ante niveles de inflación “intolerables”</h4>
+                 
+          </div>
+    
+           <!-- ============AFTER HOVER====================== -->
+    
+          <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+          url('data/news_11.png');">
+    
+              <div  style="font-size: 16px;
+              line-height: 19px;">
+                 
+                 <div class="new__categorie" style="margin-left: -15%;margin-bottom: -5%;">
+                    <div class="categorie__line"></div>
+                    <span class="categorie__title">CGT</span>
+                    </div>
+
+                  <p >El Gobierno trata de reacomodarse luego de la salida de Martín Guzmán y el reemplazo de la flamante ministra de Economía, Silvina Batakis.</p>
+                 
+              </div>
+          </div>
+      </div>
+    
+       </div>
+    
+    
+    
+    
+    </div>
+    
+    
+    </div>
+      </div>
+
+      /*--------------------------------PANEL 5 ----------------------
+       ----------------------------------*/
+
+
+      <div class="panel five">
+     
+    <div style="width:40%; margin-left: -99%;">
+        <div class="card__container_2" style="margin-top: 83%;">
+    
+            <div class="card_content__container" >
+    
+                <img  style=" margin-bottom: -70px;" class="star" src="./assets/star.png" alt="">
+    
+                <div class="new__categorie" >
+                    <div class="categorie__line"></div>
+                    <span class="categorie__title">MILAGROS SALA</span>
+                </div>
+    
+    
+    
+                <h4 style="margin:0px; margin-bottom: 10px; color: white; font-size: 16px; line-height: 23,44px; text-align: start;" >Otro arrepentido contra Milagro Sala: habló de los $5M para la campaña 2015</h4>
+                <div class="comment__container">
+                    <div class="user_data__container">
+                        <img class="comentario_icon" src="data/user_2.png" style="width: 15%; height: auto; padding-bottom: 5px;" alt="">
+                        <div class="user_name__container">
+                            <p class="user_name">Héctor González</p>
+                            <div class="outstanding_user__container">
+                                <p style="font-size: 10PX ;">Comentario que abrió debate</p>
+                                <img class="comentario_icon" src="./assets/icon-chat.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="comment">¿200 millones de pesos para hacer cientos de casas, 2 escuelas, piletas de natación enormes, talleres textiles,...</p>
+                    <div class="actions__container">   
+                        <p class="mg">20 Me gusta</p>
+                        <p class="mg">5 No me gusta</p>
+                        <p class="mg">10 Respuestas</p>
+                    </div>
+                </div>
+                <button class="comment__button">Comentar</button>
+            </div>
+        </div>
+    </div>
+    
+  </div>
+
+
+  /*--------------------------------PANEL 6 --------------------------------------------------------*/
+
+<div class="panel six">
+
+ 
+        
+    <div class="main-container_card"  style="margin-top: 56.5%; width: 80%; height: 50%; margin-left: -149%;">
+         
+
+        <!-- -_-_-_-_-_-_-_-_-_-_-el ancho se cambia desde el width del container-_-_-_-_-_-_-_-_-_-_--->
+<div class="container" style="width: 450px; ">
+
+       
+        <!-- -_-_-_-_-_-_-_-_-_-_-el ancho  y altura de la card se cambia de aca-_-_-_-_-_-_-_-_-_-_--->
+
+
+
+
+        
+   <div class="card card-2" style="height: 180px; margin-top: 0px;" >
+
+
+         
+                        <!-- ============BEFORE HOVER====================== -->
+           
+           
+                        <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+                        url('data/news_12.png');">
+                            
+                            
+                            <div class="new__categorie" style="margin-left: -1.5%;">
+                              <div class="categorie__line"></div>
+                              <span class="categorie__title">POLÉMICA</span>
+                          </div>
+                            
+                            <h4 class="white-tittle" style="font-size: 16px; line-height: 19px;">La Iglesia advirtió por la “profunda crisis política”</h4>
+                               
+                        </div>
+             
+                         <!-- ============AFTER HOVER====================== -->
+             
+                        <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                        url('data/news_12.png');">
+                             
+  
+                                  
+  
+                            <div style="font-size: 16px;
+                            line-height: 19px;">
+  
+                                    <div class="new__categorie" style="margin-left: -7%;">
+                                      <div class="categorie__line"></div>
+                                      <span class="categorie__title">POLÉMICA</span>
+                                  </div>
+                                <p >En la conmemoración por el Día de la Independencia, los obispos manifestaron su preocupación por las peleas dentro de la coalición oficialista.</p>
+                               
+                            </div>
+                        </div>
+</div>
+
+
+<div style="display: flex; flex-direction: row; margin-top: -7%;">
+
+
+
+  
+       <div class="card card-2" style="height: 230px; width: 50%;">
+        
+
+         
+                              <!-- ============BEFORE HOVER====================== -->
+                 
+                 
+                              <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+                              url('data/news_13.png');">
+  
+                                  <div style="margin-left: 0%; padding-left: 8px !important " class="new__categorie" >
+                                      <div class="categorie__line"></div>
+                                      <span class="categorie__title">ECONOMÍA</span>
+                                  </div>
+  
+                                  <h4 class="white-tittle" style="font-size: 16px;line-height: 19px;">La reaparición de Alberto: que dijo sobre Guzmán, sus diferencias con Cristina y el pedido de unidad</h4>
+                                     
+                              </div>
+                   
+                               <!-- ============AFTER HOVER====================== -->
+                   
+                              <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                              url('data/news_13.png');">
+          
+                                  <div style="font-size: 16px;
+                                  line-height: 19px;">
+  
+                                      <div class="new__categorie new_categorie__after" style="margin-left: 0%;">
+                                          <div class="categorie__line"></div>
+                                          <span class="categorie__title">ECONOMÍA</span>
+                                      </div>
+                                      
+                                      <p style="font-size: 12px">El presidente Alberto Fernández aseguró hoy que con la vicepresidenta Cristina Fernández de Kirchner puede "tener diferencias, pero no en lo sustancial".</p>
+                                     
+                                  </div>
+                              </div>
+       </div>
+
+
+
+       <div class="card card-2" style="height: 230px; width: 50%; margin-left: 0px;">
+        
+
+           <!-- ============BEFORE HOVER====================== -->
+
+
+         <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+         url('data/news_14.png');">
+
+<div style=" margin-left: 2%; padding-left: 8px !important" class="new__categorie">
+    <div class="categorie__line"></div>
+    <span class="categorie__title">MARCHAS</span>
+</div>
+             <h4 class="white-tittle" style="font-size: 16px; line-height: 19px;" >En el Obelisco y en el interior, banderazos para "defender la república"</h4>
+                
+         </div>
+
+          <!-- ============AFTER HOVER====================== -->
+
+         <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+         url('data/news_14.png');">
+
+             <div  style="font-size: 16px;
+             line-height: 19px;">
+                
+                <div class="new__categorie new_categorie__after" style="margin-left: 0%; margin-bottom: -10%;" >
+                    <div class="categorie__line"></div>
+                    <span class="categorie__title">MARCHAS</span>
+                </div>
+                 <p style="font-size: 12px">En el marco de la conmemoración del Día de la Independencia, distintas protestas políticas opositoras se desarrollaron hoy por la tarde en varios destinos del país.</p>
+                
+             </div>
+         </div>
+     </div>
+
+   </div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+/*--------------------------------PANEL 7  (tiene la card del dolar y el bloque de 3)--------------------------------------------------------*/
+      <div class="panel seven">
+     
+    
+
+    <div class="card_dolar__container" style=" margin-top: 31.2%; margin-left: -174%; ">
+        <h4 class="card_dolar__title">¿Cómo cerró el Banco Central hoy?</h4>
+        <p class="card_dolar__paragraph">Hoy 12 de julio de 2022 los precios están así</p>
+        <div class="pill">Dólar Oficial: $133,89</div>
+        <div class="pill">Dólar Turista: $220,92</div>
+        <div class="pill">Dólar Blue: $273,00</div>
+        <div class="pill">Euro: $134,94</div>
+        <div class="pill">Riesgo país: 2576</div>
+    </div>
+
+
+
+    
+    <div class="main-container_card" style="margin-top: -55% ; margin-left: -143%;">
+         
+
+        <!-- -_-_-_-_-_-_-_-_-_-_-el ancho se cambia desde el width del container-_-_-_-_-_-_-_-_-_-_--->
+<div class="container" style="width: 450px; ">
+
+       
+        <!-- -_-_-_-_-_-_-_-_-_-_-el ancho  y altura de la card se cambia de aca-_-_-_-_-_-_-_-_-_-_--->
+
+<div style="display: flex; flex-direction: row;">
+
+
+
+  
+       <div class="card card-2" style="height: 230px; width: 50%;">
+        
+
+             <!-- ============BEFORE HOVER====================== -->
+
+
+           <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+           url('data/news_16.png');">
+
+               <div style="margin-left: 0%; padding-left: 8px !important " class="new__categorie" >
+                   <div class="categorie__line"></div>
+                   <span class="categorie__title">ECONOMÍA</span>
+               </div>
+
+               <h4 class="white-tittle" style="font-size: 16px;line-height: 19px;">La Argentina dejó de ser el país de la región que tenía la carne vacuna más barata</h4>
+                  
+           </div>
+
+            <!-- ============AFTER HOVER====================== -->
+
+           <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+           url('data/news_16.png');">
+
+               <div style="font-size: 16px;
+               line-height: 19px;">
+
+                   <div class="new__categorie new_categorie__after" style="margin-left: 0%;">
+                       <div class="categorie__line"></div>
+                       <span class="categorie__title">ECONOMÍA</span>
+                   </div>
+                   
+                   <p style="font-size: 12px">
+                    En ese marco, un informe del Instituto de Estudios sobre la Realidad Argentina y Latinoamericana (IERAL), dependiente de la Fundación Mediterránea.
+                    
+                    </p>
+                  
+               </div>
+           </div>
+       </div>
+
+
+
+       <div class="card card-2" style="height: 230px; width: 50%; margin-left: 0px;">
+        
+
+           <!-- ============BEFORE HOVER====================== -->
+
+
+         <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+         url('data/news_17.png');">
+
+         <div style=" margin-left: 0%; padding-left: 8px !important" class="new__categorie">
+           <div class="categorie__line"></div>
+           <span class="categorie__title">MANIFESTACIÓN</span>
+       </div>
+             <h4 class="white-tittle" style="font-size: 16px; line-height: 19px;" >Banderazo y bocinas en Plaza Moreno en el marco de las protestas contra el Gobierno</h4>
+                
+         </div>
+
+          <!-- ============AFTER HOVER====================== -->
+
+          <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+          url('data/news_17.png');">
+
+              <div style="font-size: 16px;
+              line-height: 19px;">
+                  <div class="new__categorie new_categorie__after" style="margin-left: 0%;" >
+                      <div class="categorie__line"></div>
+                      <span class="categorie__title">MANIFESTACIÓN</span>
+                  </div>
+                  <p style="font-size: 12px">Luego de una semana marcada por la crisis política que atraviesa el oficialismo y su consecuente disparada cambiaria.</p>
+                 
+              </div>
+          </div>
+  
+     </div>
+   
+   </div>
+
+
+
+
+   <div class="card card-2" style="height: 180px; margin-top: 0px;" >
+
+
+       <!-- ============BEFORE HOVER====================== -->
+
+
+     <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+     url('data/news_18.png');">
+         
+         
+         <div class="new__categorie" style="margin-left: -1.5%;">
+           <div class="categorie__line"></div>
+           <span class="categorie__title">DOLAR</span>
+       </div>
+         
+         <h4 class="white-tittle" style="font-size: 16px; line-height: 19px;">Bajaron el blue y los financieros en una rueda menos tensionada</h4>
+            
+     </div>
+
+      <!-- ============AFTER HOVER====================== -->
+
+     <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+     url('data/news_18.png');">
+          
+
+               
+
+         <div style="font-size: 16px;
+         line-height: 19px;">
+
+                 <div class="new__categorie" style="margin-left: -7%;">
+                   <div class="categorie__line"></div>
+                   <span class="categorie__title">DOLAR</span>
+               </div>
+             <p >El dólar blue comenzó la semana “corta” con firme baja de cuatro pesos, a $294 en la Región y $291 para la venta en CABA. La divisa sostiene una caída de cinco pesos o 1,7% en el mercado paralelo en lo que va de agosto.</p>
+            
+         </div>
+     </div>
+ </div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+  </div>
+
+  /*--------------------------------PANEL 8  (tiene la card del dolar y el bloque de 3)--------------------------------------------------------*/
+
+
+<div class="panel eight" style="width:1100px;">
+
+    
+     
+    <div style="width:40%; margin-left: -91.5%;">
+        <div class="card__container" style="margin-top: 40.5%;">
+    
+            <div class="card_content__container">
+    
+                <img class="star" src="./assets/star.png" alt="">
+    
+                <div class="new__categorie" >
+                    <div class="categorie__line"></div>
+                    <span class="categorie__title">DOLAR</span>
+                </div>
+    
+    
+    
+                <h4 style="margin:0px; margin-bottom: 10px; color: white; font-size: 16px; line-height: 23,44px; text-align: start;" >El FMI respaldó las medidas de Batakis: habló de "esfuerzo para fortalecer los controles de gastos"</h4>
+                <div class="comment__container">
+                    <div class="user_data__container">
+                        <img class="user__img" src="./assets/user.png" alt="">
+                        <div class="user_name__container">
+                            <p class="user_name">Liliana Gonzalez</p>
+                            <div class="outstanding_user__container">
+                                <p style="font-size: 10PX ;">Comentario que abrió debate</p>
+                                <img class="comentario_icon" src="./assets/icon-chat.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="comment">Por algo Perón los echo de la plaza !!! Memoria Montoneros Guerrilleros ya lo vivimos x Dios Despierten!!!</p>
+                    <div class="actions__container">   
+                        <p class="mg">20 Me gusta</p>
+                        <p class="mg">5 No me gusta</p>
+                        <p class="mg">10 Respuestas</p>
+                    </div>
+                </div>
+                <button class="comment__button">Comentar</button>
+            </div>
+        </div>
+    </div>
+    
+
+
+          
+<div style="display: flex ; margin-top: -29.8%; margin-left: -10.5% ;">
+
+
+    <div class="main-container_card" style=" width: 40%; height: 50%; margin-left: -33.5%;">
+
+        <div class="container" style=" margin-left: 4%; width: 50%;">
+       
+            <div class="card card-2" >
+                 
+         
+                <!-- ============BEFORE HOVER====================== -->
+   
+   
+              <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+              url('data/news_19.png');">
+
+              <div class="new__categorie" style="margin-left: -9%;">
+                   <div class="categorie__line"></div>
+                   <span class="categorie__title">CONSEJO</span>
+             </div>
+
+                  <h4 class="white-tittle" style=" font-size: 18px;">Avanzan con las recategorizaciones en el Concejo Deliberante</h4>
+                     
+              </div>
+   
+               <!-- ============AFTER HOVER====================== -->
+   
+              <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+              url('data/news_19.png');">
+
+                  <div>
+                     
+                    <div class="new__categorie" style="margin-left: -15%; margin-bottom: -5%;">
+                        <div class="categorie__line"></div>
+                        <span class="categorie__title">CONSEJO</span>
+                  </div>
+
+                      <p >El Concejo Deliberante de La Plata comenzó con una primera etapa de recategorización de sus empleados. “Se van a implementar teniendo en cuenta la disponibilidad de cupos según cada categoría "</p>
+                     
+                  </div>
+              </div>
+          </div>
+   
+   
+   <!--el coso de aca no me toma la altura, ni me dejaba de terminas de modificar el ancho, porque debe tener alguna porpiedad que adapte el ancho del contenedor al contenido -->
+          <div class="news_image_text" style="width: 75%; ">
+             <img style="margin-left: 8px; border-radius: 5px;" class="news_img"  src="data/news_20.png" alt="">
+   
+             <div>
+             <div class="categorie__line" style="display: flex; align-items: center; margin-left: 2% ;">   <h5 class="black-tittle_hour" style="margin-left: 4px ;">LA PLATA · 3:35</h5> </div>
+             
+             
+              <a style="font-family: 'Roboto'; font-style: normal;
+               font-weight: 700; font-size: 12px; line-height: 19px; width: 95%; margin-left: 2%; margin-top: 6px; color: #000000;" href="" class="black-tittle" style="color: black;">Denuncian vandalismo contra diputado platense </a>
+              </div>
+          </div>
+   
+   
+     
+                   
+        </div>
+    
+     
+    </div>
+
+    <div class="main-container_card" style=" width: 40%; height: 50%; margin-left: -58%;">
+
+        <div class="container" style=" margin-left: 4%; width: 50%;">
+       
+            <div class="card card-2" >
+                 
+         
+                <!-- ============BEFORE HOVER====================== -->
+   
+   
+              <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+              url('data/news_21.png');">
+
+              <div class="new__categorie" style="margin-left: -9%;">
+                   <div class="categorie__line"></div>
+                   <span class="categorie__title">LARRETA</span>
+             </div>
+
+                  <h4 class="white-tittle" style=" font-size: 18px;">“El dato está mal”: Larreta le respondió a criticó a Cristina por su frase sobre los dólares que produce CABA</h4>
+                     
+              </div>
+   
+               <!-- ============AFTER HOVER====================== -->
+   
+              <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+              url('data/news_21.png');">
+
+                  <div>
+                     
+                    <div class="new__categorie" style="margin-left: -15%; margin-bottom: -5%;">
+                        <div class="categorie__line"></div>
+                        <span class="categorie__title">ECONOMÍA</span>
+                  </div>
+
+                      <p >Horacio Rodríguez Larreta contestó este sábado las críticas de Cristina Kirchner sobre los dólares que produce a la Ciudad de Buenos Aires. </p>
+                     
+                  </div>
+              </div>
+          </div>
+   
+   
+   <!--el coso de aca no me toma la altura, ni me dejaba de terminas de modificar el ancho, porque debe tener alguna porpiedad que adapte el ancho del contenedor al contenido -->
+          <div class="news_image_text" style="width: 75%; ">
+             <img style="margin-left: 10px; border-radius: 5px;" class="news_img"  src="data/news_22.png" alt="">
+   
+             <div>
+             <div class="categorie__line" style="display: flex; align-items: center; margin-left: 2% ;">   <h5 class="black-tittle_hour" style="margin-left: 4px ;">PIQUETES · 00:05</h5> </div>
+             
+             
+              <a style="font-family: 'Roboto'; font-style: normal;
+               font-weight: 700; font-size: 12px; line-height: 19px; width: 95%; margin-left: 2%; margin-top: 6px; color: #000000;" href="" class="black-tittle" style="color: black;">Feriado patrio con múltiples protestas "por la crisis" </a>
+              </div>
+          </div>
+   
+     
+                   
+        </div>
+    
+     
+    </div>
+
+   
+    <div style="width: 300px; height: 80vh; margin-top: -15%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+       <h3 style="font-family: 'Roboto';
+       font-style: normal;
+       font-weight: 700;
+       font-size: 24px;
+       line-height: 28px;
+       text-align: center;
+       color: #0099CC;">Ya estás al día!</h3>
+
+       <a style="font-family: 'Roboto';
+       font-style: normal;
+       font-weight: 400;
+       font-size: 14px;
+       line-height: 16px;
+       text-align: center;
+       text-decoration: underline;" href="">Ver más de Política y Economía</a>
+    </div>
+    
+
+</div>
+
+
+
+    </div>
+
+
+
+
+</section>
+
+
+<section class="feed-1" id="deportes">
+         
+    <!-- partial:index.partial.html -->
+  
+           
+    
+          <div class="panel one" >
+    
+            <img class="timeline" src="data/linea-tiempo.png" alt="liena de tiempo">
+            <h1 class="text"></h1> 
+            
+        <!-- ----------------------------PANEL 1-------------------------------------- -->
+    
+                <div class="main-container_card" >
+     
+                <div class="container" style=" margin-left: 4%;">
+               
+                    <div class="card card-2" >
+                     
+             
+                          <!-- ============BEFORE HOVER====================== -->
+             
+             
+                        <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+                        url('data/news_23.png');">
+                            <div class="new__categorie" style="margin-left: 0%;">
+                                <div class="categorie__line"></div>
+                                <span class="categorie__title">GIMNASIA</span>
+                            </div>
+                            <h4 class="white-tittle">Errores en defensa y nula peligrosidad hicieron que Gimnasia perdiera sin atenuantes 2 a 0 frente a Atlético</h4>
+                               
+                        </div>
+             
+                         <!-- ============AFTER HOVER====================== -->
+             
+                        <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                        url('data/news_23.png');">
+    
+                            <div>
+                                <div class="new__categorie new_categorie__after " style="margin-left: 0%;">
+                                    <div class="categorie__line"></div>
+                                    <span class="categorie__title">GIMNASIA</span>
+                                </div>
+    
+    
+                                <h4 class="white-tittle">Errores en defensa y nula peligrosidad hicieron que Gimnasia perdiera sin atenuantes 2 a 0 frente a Atlético</h4>
+                                <p >Con errores en defensa y nula peligrosidad en el ataque, Gimnasia cayó sin atenuantes en Tucumán frente a Atlético por 2 a 0. En una producción desdibujada donde todo le costó demasiado, el Lobo de Pipo se bajó de la punta y volverá a nuestra ciudad con varios puntos por revisar.</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+             
+             
+             
+                    <div class="news_image_text">
+                        <img class="news_img"  src="data/news_24.png" alt="Cristina Fernandez">
+             
+                        <div>
+                            <div class="categorie__line" style="display: flex; align-items: center;">   <h5 class="black-tittle_hour" style="margin-left: 2% ;">Atlético Tucumán  ·  5:11</h5> </div>
+                       
+                        <a href="" class="black-tittle" style="color: black;">Los goles del conjunto tucumano con los que derrotó al Lobo</a>
+                        </div>
+                    </div>
+             
+                           
+                </div>
+            
+             
+            </div>
+    
+          </div>
+    
+    
+    <!-- ----------------------------PANEL 2-------------------------------------- -->
+    
+    <div class="panel two">
+            
+            
+                    <img style="opacity: 0;" class="timeline" src="data/linea-tiempo.png" alt="liena de tiempo">
+    
+                    <h1 class="text"></h1> 
+                    
+                
+            
+            <div class="main-container_card">
+             
+    
+                             <!-- -_-_-_-_-_-_-_-_-_-_-el ancho se cambia desde el width del container-_-_-_-_-_-_-_-_-_-_--->
+                <div class="container" style="width: 450px; ">
+    
+                            
+                             <!-- -_-_-_-_-_-_-_-_-_-_-el ancho  y altura de la card se cambia de aca-_-_-_-_-_-_-_-_-_-_--->
+    
+                    <div style="display: flex; flex-direction: row;">
+    
+    
+    
+                       
+                            <div class="card card-2" style="height: 230px; width: 50%;">
+                             
+                     
+                                  <!-- ============BEFORE HOVER====================== -->
+                     
+                     
+                                <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+                                url('data/news_25.png');">
+    
+                                    <div style="margin-left: 0%; padding-left: 8px !important " class="new__categorie" >
+                                        <div class="categorie__line"></div>
+                                        <span class="categorie__title">OPINIONES</span>
+                                    </div>
+    
+                                    <h4 class="white-tittle" style="font-size: 16px;line-height: 19px;">Gorosito: "No somos un desastre por perder un partido, ni éramos el Liverpool antes”</h4>
+                                       
+                                </div>
+                     
+                                 <!-- ============AFTER HOVER====================== -->
+                     
+                                <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                                url('data/news_25.png');">
+            
+                                    <div style="font-size: 16px;
+                                    line-height: 19px;">
+    
+                                        <div class="new__categorie new_categorie__after" style="margin-left: 0%;">
+                                            <div class="categorie__line"></div>
+                                            <span class="categorie__title">OPINIONES</span>
+                                        </div>
+                                        
+                                        <p style="font-size: 12px">Gimnasia perdió 2 a 0 ante Atlético Tucumán, cortó una racha de 12 partidos sin conocer la derrota y cedió la punta del campeonato que quedó en manos de Newell's que la lidera con 15 unidades.</p>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+    
+                            <div class="card card-2" style="height: 230px; width: 50%; margin-left: 0px; ">
+                             
+                     
+                                <!-- ============BEFORE HOVER====================== -->
+                   
+                   
+                              <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+                              url('data/news_26.png');">
+    
+                              <div style=" margin-left: 0%; padding-left: 8px !important" class="new__categorie">
+                                <div class="categorie__line"></div>
+                                <span class="categorie__title">TENIS</span>
+                            </div>
+                                  <h4 class="white-tittle" style="font-size: 16px; line-height: 19px;" >Djokovic, campeón de Wimbledon: venció a Kyrgios y alcanzó su 21° trofeo de Grand Slam</h4>
+                                     
+                              </div>
+                   
+                               <!-- ============AFTER HOVER====================== -->
+                   
+                               <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                               url('data/news_26.png');">
+           
+                                   <div style="font-size: 16px;
+                                   line-height: 19px;">
+                                       <div class="new__categorie new_categorie__after" style="margin-left: 0%;" >
+                                           <div class="categorie__line"></div>
+                                           <span class="categorie__title">TENIS</span>
+                                       </div>
+                                       <p style="font-size: 12px">El serbio Novak Djokovic se coronó hoy campeón de Wimbledon por séptima vez al vencer al australiano Nick Kyrgios por 4-6, 6-3, 6-4, 7-6 (3...</p>
+                                      
+                                   </div>
+                               </div>
+                        <!--  <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                              url('data/news_4.png');">
+                                <div class="new__categorie new_categorie__after">
+                                    <div class="categorie__line"></div>
+                                    <span class="categorie__title">POLITICA</span>
+                                </div>
+                                <p style="font-size: 12px;
+                                line-height: 19px;">El Gobierno trata de reacomodarse luego de la salida de Martín Guzmán y el reemplazo de...</p>
+                            </div>
+                            -->
+                          </div>
+                        
+                        </div>
+    
+    
+    
+    
+                        <div class="card card-2" style="height: 180px; margin-top: 0px;" >
+                     
+             
+                            <!-- ============BEFORE HOVER====================== -->
+               
+               
+                          <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+                          url('data/news_27.png');">
+                              
+                              
+                              <div class="new__categorie" style="margin-left: -1.5%;">
+                                <div class="categorie__line"></div>
+                                <span class="categorie__title">ACCIDENTE</span>
+                            </div>
+                              
+                              <h4 class="white-tittle" style="font-size: 16px; line-height: 19px;">Violencia, tiros y heridos en Luján - Alem: graves incidentes en el clásico de ascenso</h4>
+                                 
+                          </div>
+               
+                           <!-- ============AFTER HOVER====================== -->
+               
+                          <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                          url('data/news_27.png');">
+                               
+    
+                                    
+    
+                              <div style="font-size: 16px;
+                              line-height: 19px;">
+    
+                                      <div class="new__categorie" style="margin-left: -7%;">
+                                        <div class="categorie__line"></div>
+                                        <span class="categorie__title">ACCIDENTE</span>
+                                    </div>
+                                  <p >Otra vez la violencia en el fútbol convirtió un espectáculo deportivo en un hecho preocupante. Este domingo, el clásico entre Luján y Alem, por la Primera C, fue suspendido por graves incidentes. </p>
+                                 
+                              </div>
+                          </div>
+                      </div>
+               
+    
+                    </div>
+                    
+                     
+                    </div>
+            
+    
+               
+    
+    
+    
+          </div>
+    
+          /*--------------------------------PANEL 3 --------------------------------------------------------*/
+          
+          <div class="panel three" >
+    
+    
+    
+              
+           <div style="display: flex ;">
+    
+    
+            <div class="main-container_card" style="margin-top: 51.2%; width: 90%; height: 50%; margin-left: -33.5%;">
+     
+                <div class="container" style=" margin-left: 4%; width: 50%;">
+               
+                    <div class="card card-2" >
+                     
+             
+                        <!-- ============BEFORE HOVER====================== -->
+           
+           
+                      <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+                      url('data/news_28.png');">
+    
+                      <div class="new__categorie" style="margin-left: -6%;">
+                           <div class="categorie__line"></div>
+                           <span class="categorie__title">RACING</span>
+                     </div>
+    
+                          <h4 class="white-tittle" style=" font-size: 18px;">Racing le ganó 1 a 0 a Independiente con un golazo de Hauche en el clásico de Avellaneda</h4>
+                             
+                      </div>
+           
+                       <!-- ============AFTER HOVER====================== -->
+           
+                      <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                      url('data/news_28.png');">
+    
+                          <div>
+                             
+                            <div class="new__categorie" style="margin-left: -15%; margin-bottom: -5%;">
+                                <div class="categorie__line"></div>
+                                <span class="categorie__title">RACING</span>
+                          </div>
+    
+                              <p >Racing venció 1-0 a Independiente en una nueva edición del clásico de Avellaneda por la séptima fecha de la Liga Profesional (LPF)...</p>
+                             
+                          </div>
+                      </div>
+                  </div>
+           
+           
+           <!--el coso de aca no me toma la altura, ni me dejaba de terminas de modificar el ancho, porque debe tener alguna porpiedad que adapte el ancho del contenedor al contenido -->
+                  <div class="news_image_text" style="width: 75%; ">
+                     <img style="margin-left: 8px; border-radius: 5px;" class="news_img"  src="data/news_29.png" alt="">
+           
+                     <div>
+                     <div class="categorie__line" style="display: flex; align-items: center; margin-left: 2% ;">   <h5 class="black-tittle_hour" style="margin-left: 4px ;">ESTUDIANTES · 4:00</h5> </div>
+                     
+                     
+                      <a style="font-family: 'Roboto'; font-style: normal;
+                       font-weight: 700; font-size: 12px; line-height: 19px; width: 95%; margin-left: 2%; margin-top: 6px; color: #000000;" href="" class="black-tittle" style="color: black;">Aliento albirrojo en las tribunas de 1 y 57: mirá la galería de fotos</a>
+                      </div>
+                  </div>
+           
+             
+                           
+                </div>
+            
+             
+            </div>
+    
+            <div class="main-container_card" style="margin-top: 51.2%; width: 90%; height: 50%; margin-left: -50%;">
+     
+                <div class="container" style=" margin-left: 4%; width: 50%;">
+               
+                    <div class="card card-2" >
+                     
+             
+                        <!-- ============BEFORE HOVER====================== -->
+           
+           
+                      <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+                      url('data/news_30.png');">
+    
+                      <div class="new__categorie" style="margin-left: -6%;">
+                           <div class="categorie__line"></div>
+                           <span class="categorie__title">ESTUDIANTES</span>
+                     </div>
+    
+                          <h4 class="white-tittle" style=" font-size: 18px;">Sin tiempo para el descanso: el miércoles con Belgrano por Copa Argentina</h4>
+                             
+                      </div>
+           
+                       <!-- ============AFTER HOVER====================== -->
+           
+                      <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                      url('data/news_30.png');">
+    
+                          <div>
+                            <div class="new__categorie" style="margin-left: -15%; margin-bottom: -5%;">
+                                <div class="categorie__line"></div>
+                                <span class="categorie__title">ESTUDIANTES</span>
+                          </div>
+                              <p >Luego de lo que significó la igualdad 2 a 2 con Central Córdoba por el certamen local, Estudiantes se enfrentará a Belgrano de Córdoba el próximo miércoles 13 de julio. Ambos equipos se jugarán...</p>
+                             
+                          </div>
+                      </div>
+                  </div>
+           
+           
+           <!--el coso de aca no me toma la altura, ni me dejaba de terminas de modificar el ancho, porque debe tener alguna porpiedad que adapte el ancho del contenedor al contenido -->
+                  <div class="news_image_text" style="width: 75%; ">
+                     <img style="margin-left: 8px; border-radius: 5px;" class="news_img"  src="data/news_31.png" alt="">
+           
+                     <div>
+                     <div class="categorie__line" style="display: flex; align-items: center; margin-left: 2% ;">   <h5 class="black-tittle_hour" style="margin-left: 4px ;">RIVER · 2:24</h5> </div>
+                     
+                     
+                      <a style="font-family: 'Roboto'; font-style: normal;
+                       font-weight: 700; font-size: 12px; line-height: 19px; width: 95%; margin-left: 2%; margin-top: 6px; color: #000000;" href="" class="black-tittle" style="color: black;">River, ante el Tomba y el clásico Racing-Rojos se roban la fecha</a>
+                      </div>
+                  </div>
+           
+             
+                           
+                </div>
+            
+             
+            </div>
+    
+        </div>
+    
+    
+        
+          </div>
+    
+    
+          /*--------------------------------PANEL 4 --------------------------------------------------------*/
+    
+    
+          <div class="panel four" >
+    
+    
+            <div class="main-container_card" style="margin-top: 74%; width: 80%; height: 50%; margin-left: -43%; ">
+             
+    
+                <!-- -_-_-_-_-_-_-_-_-_-_-el ancho se cambia desde el width del container-_-_-_-_-_-_-_-_-_-_--->
+        <div class="container" style="width: 450px; ">
+        
+               
+                <!-- -_-_-_-_-_-_-_-_-_-_-el ancho  y altura de la card se cambia de aca-_-_-_-_-_-_-_-_-_-_--->
+        
+        <div style="display: flex; flex-direction: column;">
+        
+        
+    <div class="parent" style="border-radius: 10px;">
+    
+    
+        <figure class="effeckt-caption" data-effeckt-type="cover-fade">
+    
+         
+            <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+            url('data/news_35.png'); border-radius: 10px;">
+            
+               <img src="data/play.png" alt="" style=" position: absolute; top: 43%; left: 43%;">
+    
+               <h4 class="white-tittle" style="font-size: 16px; line-height: 19px; padding-top: 72%; padding-bottom: 5%;">Alberto F. también salió a cruzar a Guzmán</h4>
+                   
+            </div>
+         
+              
+        
+          <figcaption>
+            <div class="effeckt-figcaption-wrap">
+             
+                
+      
+              <!--
+      
+                EL width y height de la etiqueta video, cambian el tamaño del reproductor. 
+                Sin el constrols mute, el autoplay true no arranca. 
+                Pero para que tambien coincida con el contenedor, tambien hay que cambiar los tamaños en 
+                la clase "effeckt-caption".
+       
+      -->
+              <video width="224px" id="backface-video" height="209px" poster="http://video-js.zencoder.com/oceans-clip.jpg" loop="true" autoplay="autoplay" controls muted>
+                <source src="data/videoDeporte2.mp4" type="video/mp4" >
+                <source src="data/videoDeporte2.mp4" video/webm" >
+              </video>
+      
+            </div>
+             
+          </figcaption>
+      
+        </figure>
+      </div>
+             
+             <div class="card card-2" style="height: 210px; width: 50%; margin-left: 0px; margin-top: -19.5%;">
+                
+        
+                <!-- ============BEFORE HOVER====================== -->
+        
+        
+              <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+              url('data/news_36.png');">
+    
+              <div class="new__categorie" style="margin-left: -7%;">
+              <div class="categorie__line"></div>
+              <span class="categorie__title">CRUCES</span>
+              </div>
+    
+                  <h4 class="white-tittle" style="font-size: 16px; line-height: 19px;" >Mauro Zárate sigue de mal humor: otro cruce caliente con hinchas</h4>
+                     
+              </div>
+        
+               <!-- ============AFTER HOVER====================== -->
+        
+              <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+              url('data/news_36.png');">
+        
+                  <div  style="font-size: 16px;
+                  line-height: 19px;">
+                     
+                     <div class="new__categorie" style="margin-left: -15%;margin-bottom: -5%;">
+                        <div class="categorie__line"></div>
+                        <span class="categorie__title">CRUCES</span>
+                        </div>
+    
+                      <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna purus quis et quis ut ultrices porttitor. Feugiat sapien senectus netus in aliquam, duis consequat turpis. Tortor tortor pulvinar gravida purus eget.</p>
+                     
+                  </div>
+              </div>
+          </div>
+        
+           </div>
+        
+        
+        
+        
+        </div>
+        
+        
+        </div>
+          </div>
+    
+          /*--------------------------------PANEL 5 ----------------------
+           ----------------------------------*/
+    
+    
+          <div class="panel five">
+         
+        <div style="width:40%; margin-left: -99%;">
+            <div class="card__container_3" style="margin-top: 83%;" style=" background-image: url('data/news_32.png');">
+        
+                <div class="card_content__container" style="padding-bottom: -30px" >
+        
+                    <img  style=" margin-bottom: -30px;" class="star" src="./assets/star.png" alt="">
+        
+                    <div class="new__categorie" >
+                        <div class="categorie__line"></div>
+                        <span class="categorie__title">TENIS</span>
+                    </div>
+        
+        
+        
+                    <h4 style="margin:0px; margin-bottom: 10px; color: white; font-size: 16px; line-height: 23,44px; text-align: start;" >Gullermo Vilas, una leyenda del deporte que celebra 70 años
+                    </h4>
+                    <div class="comment__container">
+                        <div class="user_data__container">
+                            <img class="comentario_icon" src="data/user_2.png" style="width: 15%; height: auto; padding-bottom: 5px;" alt="">
+                            <div class="user_name__container">
+                                <p class="user_name">pochacapalotiep</p>
+                                <div class="outstanding_user__container">
+                                    <p style="font-size: 10PX ;">Comentario que abrió debate</p>
+                                    <img class="comentario_icon" src="./assets/icon-chat.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="comment">👏👏👏👏👏🍀👌un gran maestro del deporte y tenista argentino 💙</p>
+                        <div class="actions__container">   
+                            <p class="mg">30 Me gusta</p>
+                            <p class="mg">0 No me gusta</p>
+                            <p class="mg">14 Respuestas</p>
+                        </div>
+                    </div>
+                    <button class="comment__button">Comentar</button>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    
+    
+      /*--------------------------------PANEL 6 --------------------------------------------------------*/
+    
+    <div class="panel six">
+    
+     
+            
+        <div class="main-container_card"  style="margin-top: 56.5%; width: 80%; height: 50%; margin-left: -149%;">
+             
+    
+            <!-- -_-_-_-_-_-_-_-_-_-_-el ancho se cambia desde el width del container-_-_-_-_-_-_-_-_-_-_--->
+    <div class="container" style="width: 450px; ">
+    
+           
+            <!-- -_-_-_-_-_-_-_-_-_-_-el ancho  y altura de la card se cambia de aca-_-_-_-_-_-_-_-_-_-_--->
+    
+    
+    
+    
+            
+       <div class="card card-2" style="height: 180px; margin-top: 0px;" >
+    
+    
+             
+                            <!-- ============BEFORE HOVER====================== -->
+               
+               
+                            <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+                            url('data/news_33.png');">
+                                
+                                
+                                <div class="new__categorie" style="margin-left: -1.5%;">
+                                  <div class="categorie__line"></div>
+                                  <span class="categorie__title">BOCA JUNIORS</span>
+                              </div>
+                                
+                                <h4 class="white-tittle" style="font-size: 16px; line-height: 19px;">San Lorenzo sacó provecho de un Boca en crisis y en caída libre</h4>
+                                   
+                            </div>
+                 
+                             <!-- ============AFTER HOVER====================== -->
+                 
+                            <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                            url('data/news_33.png');">
+                                 
+      
+                                      
+      
+                                <div style="font-size: 16px;
+                                line-height: 19px;">
+      
+                                        <div class="new__categorie" style="margin-left: -7%;">
+                                          <div class="categorie__line"></div>
+                                          <span class="categorie__title">BOCA JUNIORS</span>
+                                      </div>
+                                    <p >Un ex jugador de River fue detenido este lunes por portación de arma en un robo dentro de una casa particular, en Caseros. Se trata de Ezequiel Cirigliano, quien debutó con el Millonario</p>
+                                   
+                                </div>
+                            </div>
+    </div>
+    
+    
+    <div style="display: flex; flex-direction: row; margin-top: -7%;">
+    
+    
+    
+      
+           <div class="card card-2" style="height: 230px; width: 50%;">
+            
+    
+             
+                                  <!-- ============BEFORE HOVER====================== -->
+                     
+                     
+                                  <div class="preview" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+                                  url('data/news_34.png');">
+      
+                                      <div style="margin-left: 0%; padding-left: 8px !important " class="new__categorie" >
+                                          <div class="categorie__line"></div>
+                                          <span class="categorie__title">BARRACAS</span>
+                                      </div>
+      
+                                      <h4 class="white-tittle" style="font-size: 16px;line-height: 19px;">Barracas sorprendió a Talleres en Córdoba
+                                    </h4>
+                                         
+                                  </div>
+                       
+                                   <!-- ============AFTER HOVER====================== -->
+                       
+                                  <div class="content white-tittle_content" style=" background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+                                  url('data/news_34.png');">
+              
+                                      <div style="font-size: 16px;
+                                      line-height: 19px;">
+      
+                                          <div class="new__categorie new_categorie__after" style="margin-left: 0%;">
+                                              <div class="categorie__line"></div>
+                                              <span class="categorie__title">BARRACAS</span>
+                                          </div>
+                                          
+                                          <p style="font-size: 12px">Barracas Central, en silencio y sin hacer demasiado ruido, se va acomodando en la tabla de posiciones gracias a los resultados, que por ahora lo vienen acompañando...</p>
+                                         
+                                      </div>
+                                  </div>
+           </div>
+    
+    
+           <div class="card card-2" style="height: 230px; width: 50%; margin-left: 0px; background-color: #086A8E;" >
+        
+
+        
+            <h4 class="white-tittle" style="font-size: 16px; line-height: 19px;" >Mira la agenda deportiva del Domingo: partidos, horarios y TV</h4>
+               
+      
+    </div>
+           
+    
+       </div>
+    
+    
+    
+    
+    
+    </div>
+    
+    
+    </div>
+    
+    
+    
+    </div>
+    
+    
+    
+      /*--------------------------------PANEL 8  (tiene la card del dolar y el bloque de 3)--------------------------------------------------------*/
+    
+    
+    <div class="panel eight" style="width:1100px;">
+    
+        
+         
+     
+    
+       
+        <div style="width: 300px; height: 80vh; margin-top: 10%; display: flex; align-items: center; justify-content: center; flex-direction: column; margin-left: -90%;">
+            
+           <h3 style="font-family: 'Roboto';
+           font-style: normal;
+           font-weight: 700;
+           font-size: 24px;
+           line-height: 28px;
+           text-align: center;
+           color: #0099CC;">Ya estás al día!</h3>
+    
+           <a style="font-family: 'Roboto';
+           font-style: normal;
+           font-weight: 400;
+           font-size: 14px;
+           line-height: 16px;
+           text-align: center;
+           text-decoration: underline;" href="">Ver más de Política y Economía</a>
+        </div>
+        
+    
+    </div>
+    
+    
+    
+        </div>
+    
+    
+    
+    
+    
+    
+    
+      
+    </section>
+
+
+
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+        <!-- partial -->
+
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js'></script>
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js'></script>
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js'></script>
+  <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+  
+
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="materialize.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+
+  
+
+</body>
+</html>

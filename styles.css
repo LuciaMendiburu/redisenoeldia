@@ -1,0 +1,887 @@
+:root{
+    --celeste_marca: #00AEF0;
+    --textos_oscuros: rgba(25, 24, 24, 0.9);
+    --azul_oscuro: #095A78;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+ 
+html{ 
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ================agregado del scroll=====================*/
+
+.main__container {
+  height: 100%;
+  margin-top: 0px;
+  position: sticky;
+  top: 0px;
+ 
+}
+
+/* ================agregado del scroll=====================*/
+
+nav{
+    line-height: 0;
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+}
+
+.navbar__container{
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+.navbar_first__container{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar_first_items__container, .navbar_second_items__container{
+    display: flex;
+    align-items: center;
+}
+
+.navbar_first_items__container li, .navbar_second_items__container li{
+    margin-left: 25px;
+}
+
+.menu a{
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--textos_oscuros);
+}
+
+.nav ul a:hover{
+    background-color: none !important;
+}
+
+li{
+    font-weight: 400;
+    font-size: 1.6rem;
+    list-style-type: none;
+    color: var(--textos_oscuros);
+}
+
+.last24:hover, .last24:active{
+    color: var(--celeste_marca);
+}
+
+.last24:active{
+    font-weight: 500;
+}
+
+.user__name{
+    margin-right: 0;
+}
+
+.user__img li{
+    margin-right: 50px;
+}
+
+.navbar_second__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit{
+    justify-self: flex-end;
+    width: 18px;
+    height: 18px;
+    margin-right: 50px;
+}
+
+.tabs{
+    background-color: transparent;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.tab{
+    overflow: hidden;
+}
+
+.tabs .tab a{
+    text-transform: none;
+    color: var(--textos_oscuros);
+    font-size: 1.7rem;
+}
+
+.tabs .tab a.active{
+    font-weight: 500;
+    color: var(--celeste_marca);
+}
+
+.tabs .tab a:hover{
+    color: var(--celeste_marca);
+}
+
+.tabs .tab a:focus{
+    color: var(--celeste_marca);
+}
+
+.tabs .indicator{
+    color: var(--celeste_marca);
+    background-color: var(--celeste_marca);
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active{
+    background-color: transparent;
+}
+
+.tabs a {
+    line-height: 30px;
+}
+
+.edit{
+    /* margin-left: 100px; */
+    justify-self: end;
+    width: 18px;
+    height: 18px;
+}
+
+.edit a{
+    background-color: var(--celeste_marca);
+}
+
+.modal{
+    padding-bottom: 20px;
+    border-radius: 30px;
+}
+
+.modal__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.last24hs{
+    color: var(--celeste_marca);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.modal_title__container h3{
+    font-weight: 600;
+    font-size: 3.6rem;
+    color: #2F2F2F;
+}
+
+.modal_title__container p{
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #898989;
+}
+
+.buttons__container{
+    margin-top: 15px;
+}
+
+.categorie__button{
+    width: 160px;
+    height: 95px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-align: left;
+    line-height: 2.4rem;
+    letter-spacing: 0.065rem;
+    padding-left: 13px;
+    padding-top: 40px;
+    vertical-align: middle;
+    border-radius: 10px;
+    box-shadow: 0px 4px 30px 3px rgba(0, 0, 0, 0.01);
+}
+
+.categorie_button__default{
+    color: black;
+    border: 3px solid rgba(80, 80, 80, 0.1);
+    background-color: white;
+}
+
+.categorie_button__selected{
+    color: var(--celeste_marca);
+    background-color: white;
+    border: 3px solid var(--celeste_marca);
+}
+
+.button__close{
+    width: 120px;
+    height: 40px;
+    margin-right: 40px;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: 0.025rem;
+    background-color: var(--celeste_marca);
+    color: white;
+    box-shadow: 0px 4px 20px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: none;
+}
+
+.button__close:active{
+    background-color: var(--celeste_marca);
+}
+
+.modal-content{
+    margin-left: 30px;
+}
+
+.verticalDivider{
+    position:absolute;
+    left:50%;
+    top:10%;
+    bottom:10%;
+    border-left: 2px solid var(--azul_oscuro);
+}
+
+.news, .sections{
+    margin-top: 65px;
+}
+
+.news h4, .sections h4{
+    font-weight: 800;
+    color: var(--azul_oscuro);
+    line-height: 2.9rem;
+}
+
+.news ul, .sections ul{
+    margin-top: 37px;
+}
+
+.news li, .sections li{
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    height: 20px;
+}
+
+.dropdown-content li:hover{
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.new__categorie{
+    display: flex;
+    align-items: center;
+    padding-left: 27px;
+    margin-bottom: 15px;
+}
+
+.categorie__title{
+    margin-left: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+}
+
+.categorie__line{
+    border-left: 2px solid var(--celeste_marca);
+    height: 20px;
+}
+
+.new_categorie__after{
+    padding-left: 0 !important;
+}
+
+
+/* ================ ULTIMAS 24HS=====================*/
+
+#pinContainer {
+  width: 100%; 
+  height: 100vh;
+  overflow: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+#slideContainer {
+  width: 400%;
+  height: 100vh;
+}
+
+.panel {
+  height: 100vh;
+  width: 600px;
+  float: left;
+  text-align: center;
+}
+
+.text{
+  margin-top: 100px;
+  display: inline-block;
+}
+
+.one {
+  background-color:  white;
+  color: black;
+}
+.one button {
+  display: block;
+  margin: 0 auto;
+}
+
+.two {
+  background-color:  white;
+  color: black;
+}
+
+.three {
+  background-color:  white;
+  color: black;
+  position: relative;
+}
+
+.four {
+  background-color: white;
+  color: black;
+}
+
+
+.timeline{
+    margin-top: 145px;
+    width: 700%;
+    position: sticky;
+    z-index: 3;
+}
+
+
+/* ========================BLOQUES CARDS==========================*/
+
+
+
+
+
+
+
+
+
+
+
+/* ========================CARDS==========================*/
+ 
+ 
+.main-container_card .container {
+ 
+    position: relative;
+    display: flex;
+    justify-content: center;
+   
+    max-width: 602px;
+    flex-wrap: wrap;
+    z-index: 1;
+ 
+   bottom: 21vh;
+  
+    margin-left: -5px;
+    
+ margin-bottom: 1vh;
+ width:602px;
+}
+ 
+ 
+.main-container_card .container .card {
+    position: relative;
+    height: 300px;
+    width: 602px;
+    margin: 30px;
+    box-shadow: 0px 4px 20px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+}
+ 
+ 
+.news_image_text{
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px 3px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+ 
+ 
+.news_image_text div:last-child{
+ 
+   margin-left: 2%;
+   margin-right: 2%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   text-align: start;
+}
+ 
+ 
+ 
+.news_img{
+    width: auto;
+    height: 80%;
+    margin-left: 2%;
+   
+}
+ 
+.main-container_card .container .card-2 .content {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    text-align: start;
+    opacity: 0;
+    transition: 0.5s;
+    display: flex;
+   
+    align-items: flex-end;
+}
+ 
+.main-container_card .container .card  .preview{
+ 
+    background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.75) 35.61%, rgba(63, 62, 62, 0) 82.71%),
+    url('data/news_1.png');
+ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    opacity: 1;
+    transition: all .6s;
+}
+.preview h4{
+    color: #fff;
+    font-size: 22px;
+    margin: 0 5% 5% 5%;
+}
+ 
+ 
+.main-container_card .container .card-2:hover .preview {
+    opacity: 0;
+   
+ 
+}
+ 
+ 
+ 
+ 
+.main-container_card .container .card:hover .content {
+    background-image: linear-gradient(359.97deg, rgba(0, 0, 0, 0.79) 51.47%, rgba(63, 62, 62, 0) 99.98%),
+    url('data/news_1.png');
+ 
+   width: 100%;
+   height: 100%;
+   
+    transform: translateY(0px);
+    opacity: 1;
+}
+ 
+ 
+.main-container_card .container .card .content h2 {
+    position: absolute;
+    top: -80px;
+    right: 30px;
+    font-size: 6em;
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+ 
+ 
+.main-container_card .container .card .content h3 {
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+    letter-spacing: 2px;
+}
+ 
+ 
+.main-container_card .container .card .content p {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+ 
+
+
+
+.white-tittle{
+    text-align: start;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    
+    line-height: 28px;
+    color: #FFFFFF;
+    /* margin-left: 2%; */
+   
+}
+
+.black-tittle{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+
+
+}
+
+
+.black-tittle:hover {
+    text-decoration: underline;
+}
+
+.black-tittle_hour{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+
+}
+
+.white-tittle_content{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+
+}
+
+.white-tittle_content div:last-child p{
+    margin-top: 30px;
+}
+
+/* ========================CARD VIDEO==========================*/
+
+ /**
+ *
+ *  1. Se muestra la imagen de 264 x 252. 
+ 
+ *  2. Cuando se hace hover se reproduce el video que es del mismo tamaño, que se reproduce en loop. La unica diferencia es que este no tiene las puntas redondeadas como la miniatura.
+
+ *  3. El video tiene que ser minimo de 5s para que ande.
+
+ *  4. El -webkit-media-controls con display none, hace que la barra de controles del reproductor no se vea
+
+    5. no entiendo por que tiene un position absolute y como pueda afectar eso al scroll.
+ *
+ */
+/*
+<figure class="effeckt-caption" data-effeckt-type="">
+  <img src="" alt="">
+  <figcaption>
+    <div class="effeckt-figcaption-wrap"></div>
+  </figcaption>
+</figure>
+
+*/
+
+
+.parent{
+    box-sizing: content-box;
+  }
+  
+  .effeckt-caption {
+   
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+/*
+    position: absolute;
+    top: 50%;
+    left: 50%;
+*/
+    transform: translateX(-50%) translateY(-50%);
+    height: 209px;
+    margin: 0 auto;
+    width: 224px;
+  }
+  .effeckt-caption img {
+    transition: 500ms;
+  }
+  .effeckt-caption figcaption {
+    background-color: #000;
+    color: #EFE;
+    position: absolute;
+    transition: 500ms;
+    width: 100%;
+  }
+  
+  
+  .video .effeckt-caption[data-effeckt-type="cover-fade"] figcaption {
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0;
+   
+     
+  }
+  
+  video::-webkit-media-controls {
+    display: none;
+  }
+  
+  
+  .video .effeckt-caption[data-effeckt-type="cover-fade"].active figcaption {
+    opacity: 1;
+  }
+  .no-video .effeckt-caption[data-effeckt-type="cover-fade"] figcaption {
+    display: none;
+  }
+
+
+/* ========================CARDS DOLAR Y COMENTARIO DESTACADO==========================*/
+
+
+
+.card__container{
+    width: 275px;    
+    height: 439px;
+    background-image: url(./assets/batakis.png);
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    text-align: start;
+   
+    
+}
+
+.card__container_2{
+    width: 275px;    
+    height: 439px;
+    background-image: url(./data/news_15.png);
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    text-align: start;
+   
+    
+}
+
+
+.card__container_3{
+    width: 275px;    
+    height: 439px;
+    background-image: url(./data/news_32.png);
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    text-align: start;
+   
+    
+}
+.card_content__container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-left: 12px;
+    
+}
+
+.new__categorie{
+    display: flex;
+    margin-top: 150px;
+    align-self: flex-start;
+    margin-left: -25px;
+}
+
+.categorie__title{
+    margin-left: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+}
+
+.categorie__line{
+    border-left: 2px solid var(--celeste_marca);
+    height: 20px;
+}
+
+.star{
+    width: 26px;
+    height: auto;
+    align-self: flex-end;
+    margin-bottom: -50px;
+}
+
+.comment__container{
+    height: auto;
+    padding: 16px 11px 28px 11px;
+    background: rgba(0, 153, 204, 0.14);
+    /* Sombra leve */
+    box-shadow: 0px 4px 20px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.user__img{
+    width: 33.42px;
+    height: 35px;
+}
+
+.user_name{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+}
+
+.user_name__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.user_data__container{
+    display: flex;
+}
+
+.outstanding_user__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.outstanding_user__container p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    color: var(--celeste_marca);
+}
+
+.comentario_icon{
+    width: 11px;
+    height: 11.56px;
+    margin-left: 5px;
+}
+
+p{
+    margin: 0;
+}
+
+h4{
+    margin: 10px;
+}
+
+.comment{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #FFFFFF;
+    margin-top: 5px;
+}
+
+.mg{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.actions__container{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comment__button{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 34px;
+    gap: 10px;
+    background: var(--celeste_marca);
+    border: 1px solid var(--celeste_marca);
+    border-radius: 5px;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+/* FIN CARD DESTACADA */
+
+/* CARD DOLAR */
+
+.card_dolar__container{
+    width: 30%;
+    height: 66.3%;
+    background: #086A8E;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card_dolar__title{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    width: 85%;
+}
+
+.card_dolar__paragraph{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    width: 85%;
+}
+
+.pill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 41px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: white;
+    text-align: center;
+}
